@@ -1,714 +1,536 @@
 <!DOCTYPE html>
-<html lang="it" class="scroll-smooth">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skin Lab — Estetica Avanzata Torino (Pozzo Strada)</title>
-    <meta name="description" content="Skin Lab: centro di estetica avanzata a Torino. Trattamenti viso, pressoterapia, epilazione laser e cura della persona con Alessia ed Elena. Prenota su WhatsApp.">
-    <meta name="keywords" content="estetica avanzata Torino, pressoterapia Torino, epilazione laser, trattamenti viso Torino, Skin Lab Via Sagra S. Michele">
-    <meta property="og:title" content="Skin Lab — Estetica Avanzata Torino">
-    <meta property="og:description" content="Il tuo punto di riferimento a Torino per trattamenti di estetica avanzata, rigenerazione della pelle e benessere.">
+    <title>Beauty &amp; Coccole — Centro Estetico &amp; Parrucchiere a Milano (Baggio)</title>
+    <meta name="description" content="Beauty & Coccole: centro estetico e parrucchiere a Milano Baggio. Trattamenti viso e corpo, parrucchiere, unghie e momenti di coccola con Milena e Barbara. Prenota con WhatsApp.">
+    <meta name="keywords" content="centro estetico Milano, parrucchiere Baggio, trattamenti viso, trattamenti corpo, unghie Milano, Beauty e Coccole, Via Val Cannobina">
+    <meta property="og:title" content="Beauty & Coccole — Centro Estetico &amp; Parrucchiere a Milano">
+    <meta property="og:description" content="Il tuo angolo di benessere e bellezza a Milano Baggio. Trattamenti su misura, coccole e professionalità. Prenota con WhatsApp.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="it_IT">
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
-    
-    <!-- Fonts Google: Playfair Display (Serif Elegante) & Plus Jakarta Sans (Modern Sans) -->
+    <meta property="og:image" content="img/hero.jpg">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome per Icone -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- Tailwind CSS CDN -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        'sans': ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
-                        'serif': ['Playfair Display', 'Georgia', 'serif'],
+                        'sans': ['Montserrat', 'system-ui', 'sans-serif'],
+                        'display': ['Cormorant Garamond', 'Georgia', 'serif'],
                     },
                     colors: {
-                        nude: {
-                            50: '#FAF7F5',
-                            100: '#F4ECE7',
-                            200: '#E9DACF',
-                            300: '#D7BCAB',
-                            400: '#C59E87',
-                            500: '#B08066',
-                            600: '#94634B',
+                        cream: {
+                            50: '#fdfbf7',
+                            100: '#faf6ef',
+                            200: '#f4ece0',
+                            300: '#ecdfcb',
                         },
-                        onyx: {
-                            900: '#171515',
-                            950: '#0F0E0E',
+                        blush: {
+                            50: '#fdf3f5',
+                            100: '#fbe6ea',
+                            200: '#f7d2da',
+                            300: '#f0b3c0',
+                            400: '#e89aa8',
+                            500: '#d97f92',
+                            600: '#c36478',
+                            700: '#a34f61',
                         },
-                        gold: {
-                            300: '#E6CA85',
-                            400: '#D9B45B',
-                        }
+                        champagne: {
+                            100: '#f7eedb',
+                            200: '#efe0c0',
+                            300: '#e6cfa0',
+                            400: '#d9bd82',
+                            500: '#c7a665',
+                        },
+                        slate: {
+                            50: '#f6f7f9',
+                            100: '#eceef2',
+                            200: '#d5d9e1',
+                            300: '#b0b8c6',
+                            400: '#8591a5',
+                            500: '#667389',
+                            600: '#515c70',
+                            700: '#424a5b',
+                            800: '#393f4d',
+                            900: '#2b303c',
+                            950: '#1d212a',
+                        },
                     },
                 },
             },
         }
     </script>
-
     <style>
-        body { -webkit-font-smoothing: antialiased; background-color: #FAF7F5; }
-        
-        /* Smooth Scroll Reveal Animations */
-        .reveal { 
-            opacity: 0; 
-            transform: translateY(28px); 
-            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); 
+        html { scroll-behavior: smooth; }
+        body { -webkit-font-smoothing: antialiased; }
+        .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+        .reveal.in { opacity: 1; transform: none; }
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1; transform: none; transition: none; }
         }
-        .reveal.in { opacity: 1; transform: translateY(0); }
-        
-        /* Tabs active styling */
-        .tab-btn.active { 
-            background-color: #171515; 
-            color: #FFFFFF; 
-            border-color: #171515; 
-            box-shadow: 0 4px 14px rgba(23, 21, 21, 0.15);
-        }
+        .tab-btn.active { background-color: #d97f92; color: #fff; border-color: #d97f92; }
         .tab-panel { display: none; }
-        .tab-panel.active { display: block; animation: fadeIn 0.4s ease-in-out; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .dot-leader {
-            border-bottom: 1px dotted rgba(23, 21, 21, 0.2);
-            flex: 1 1 auto;
-            margin: 0 0.75rem;
-            height: 1em;
-        }
+        .tab-panel.active { display: block; }
+        @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+        .animate-floaty { animation: floaty 4s ease-in-out infinite; }
+        .dot-leader { border-bottom: 1px dotted rgba(59,55,50,.25); flex: 1 1 auto; margin: 0 .5rem; height: 1em; }
     </style>
 </head>
-<body class="text-onyx-900 font-sans antialiased selection:bg-nude-200 selection:text-onyx-900">
+<body class="bg-cream-50 text-slate-800 font-sans">
 
-    <!-- Schema.org JSON-LD per SEO Locale -->
+    <!-- ===================== JSON-LD ===================== -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BeautySalon",
-        "name": "Skin Lab - Estetica Avanzata Torino",
-        "description": "Centro estetico specializzato in trattamenti viso e corpo avanzati, epilazione laser e pressoterapia a Torino.",
-        "telephone": "+393400932048",
+        "name": "Beauty & Coccole",
+        "description": "Centro Estetico & Parrucchiere a Milano. Trattamenti viso e corpo, parrucchiere, unghie e benessere.",
+        "image": "img/hero.jpg",
+        "url": "https://e140b10007897205832a0abff21252bf.ctonew.app",
+        "telephone": "+390239410657",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Via Sagra S. Michele, 37/G",
-            "addressLocality": "Torino",
-            "postalCode": "10139",
-            "addressRegion": "TO",
+            "streetAddress": "Via Val Cannobina 11",
+            "addressLocality": "Milano",
+            "postalCode": "20152",
+            "addressRegion": "MI",
             "addressCountry": "IT"
         },
+        "geo": { "@type": "GeoCoordinates", "latitude": 45.4689, "longitude": 9.0929 },
         "priceRange": "€€",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "16"
-        }
+        "areaServed": "Milano",
+        "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "18:00" }
+        ]
     }
     </script>
 
-    <!-- Top Announcement Bar -->
-    <div class="bg-onyx-950 text-nude-100 text-xs py-2 px-4">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <span class="inline-flex items-center text-gold-400 gap-1 font-semibold">
-                    <i class="fa-solid fa-star"></i> 5.0 (16 Recensioni Google)
-                </span>
-                <span class="hidden md:inline text-nude-300">| Via Sagra S. Michele, 37/G, Torino</span>
+    <!-- ===================== STICKY NAV ===================== -->
+    <header class="sticky top-0 z-50">
+        <div class="bg-blush-500 text-white text-[11px] sm:text-xs">
+            <div class="max-w-6xl mx-auto px-4 py-1.5 flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3 sm:gap-4 flex-wrap">
+                    <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-star text-champagne-200"></i> 5.0 su Google</span>
+                    <span class="hidden sm:inline-flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-champagne-200"></i> Via Val Cannobina 11, Milano Baggio</span>
+                </div>
+                <a href="tel:+390239410657" class="inline-flex items-center gap-1.5 hover:text-champagne-200 transition whitespace-nowrap"><i class="fa-solid fa-phone"></i> 02 39410657</a>
             </div>
-            <a href="https://wa.me/393400932048?text=Ciao%20Skin%20Lab%2C%20vorrei%20informazioni%20sui%20trattamenti" target="_blank" rel="noopener" class="hover:text-gold-400 transition flex items-center gap-1.5 font-medium">
-                <i class="fa-brands fa-whatsapp text-sm"></i> Scrivici su WhatsApp
-            </a>
         </div>
-    </div>
-
-    <!-- Header / Navbar -->
-    <header class="sticky top-0 z-40 bg-nude-50/90 backdrop-blur-md border-b border-nude-200/60 shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
-            <a href="#top" class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-onyx-950 text-nude-50 flex items-center justify-center font-serif text-xl font-bold">
-                    SL
-                </div>
-                <div>
-                    <span class="block font-serif text-2xl font-semibold tracking-tight text-onyx-950">SKIN LAB</span>
-                    <span class="block text-[10px] uppercase tracking-[0.25em] text-nude-600 font-bold">Estetica Avanzata</span>
-                </div>
-            </a>
-
-            <!-- Desktop Menu -->
-            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-onyx-900">
-                <a href="#servizi" class="hover:text-nude-600 transition">Trattamenti & Prezzi</a>
-                <a href="#chi-siamo" class="hover:text-nude-600 transition">Il Salone</a>
-                <a href="#recensioni" class="hover:text-nude-600 transition">Recensioni</a>
-                <a href="#info" class="hover:text-nude-600 transition">Dove Siamo</a>
-            </nav>
-
-            <div class="flex items-center gap-3">
-                <a href="tel:3400932048" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-onyx-950 text-onyx-950 hover:bg-onyx-950 hover:text-white transition text-xs font-bold uppercase tracking-wider">
-                    <i class="fa-solid fa-phone"></i> 340 093 2048
+        <div class="bg-cream-50/95 backdrop-blur border-b border-blush-100 shadow-sm">
+            <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
+                <a href="#top" class="flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-full bg-blush-500 text-white flex items-center justify-center text-lg"><i class="fa-solid fa-spa"></i></span>
+                    <span class="leading-tight">
+                        <span class="block font-display text-xl sm:text-2xl text-slate-900 tracking-tight">Beauty <span class="text-blush-600">&amp;</span> Coccole</span>
+                        <span class="block text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-slate-500">Centro Estetico &amp; Parrucchiere</span>
+                    </span>
                 </a>
-                <a href="https://wa.me/393400932048?text=Ciao%20Skin%20Lab%2C%20vorrei%20prenotare%20un%20appuntamento" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#25D366] text-white hover:bg-[#20bd5a] transition text-xs font-bold uppercase tracking-wider shadow-md">
-                    <i class="fa-brands fa-whatsapp text-base"></i> Prenota
-                </a>
+                <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
+                    <a href="#filosofia" class="hover:text-blush-600 transition">Chi Siamo</a>
+                    <a href="#trattamenti" class="hover:text-blush-600 transition">Trattamenti</a>
+                    <a href="#recensioni" class="hover:text-blush-600 transition">Recensioni</a>
+                    <a href="#info" class="hover:text-blush-600 transition">Info &amp; Orari</a>
+                </nav>
+                <div class="flex items-center gap-2">
+                    <a href="https://wa.me/393406681348?text=Buongiorno%2C%20vorrei%20prenotare%20un%20appuntamento%20da%20Beauty%20%26%20Coccole." target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 h-10 px-4 rounded-full bg-[#25D366] text-white hover:bg-[#1fb959] transition text-sm font-bold">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Prenota
+                    </a>
+                    <a href="tel:+390239410657" class="inline-flex items-center gap-2 h-10 px-4 rounded-full bg-slate-900 text-white hover:bg-slate-800 transition text-sm font-bold">
+                        <i class="fa-solid fa-phone"></i> Chiama
+                    </a>
+                    <button id="menu-toggle" class="lg:hidden w-10 h-10 rounded-full border border-blush-200 flex items-center justify-center text-slate-700" aria-label="Menu">
+                        <i class="fa-solid fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- mobile menu -->
+            <div id="mobile-menu" class="lg:hidden hidden border-t border-blush-100 bg-cream-50">
+                <nav class="px-4 py-3 flex flex-col text-sm font-semibold text-slate-700">
+                    <a href="#filosofia" class="py-3 border-b border-blush-50 hover:text-blush-600">Chi Siamo</a>
+                    <a href="#trattamenti" class="py-3 border-b border-blush-50 hover:text-blush-600">Trattamenti</a>
+                    <a href="#recensioni" class="py-3 border-b border-blush-50 hover:text-blush-600">Recensioni</a>
+                    <a href="#info" class="py-3 hover:text-blush-600">Info &amp; Orari</a>
+                    <a href="https://wa.me/393406681348?text=Buongiorno%2C%20vorrei%20prenotare%20un%20appuntamento%20da%20Beauty%20%26%20Coccole." target="_blank" rel="noopener" class="mt-3 mb-2 inline-flex items-center justify-center gap-2 h-11 rounded-full bg-[#25D366] text-white font-bold"><i class="fa-brands fa-whatsapp text-lg"></i> Prenota con WhatsApp</a>
+                </nav>
             </div>
         </div>
     </header>
 
     <main id="top">
 
-        <!-- Hero Section -->
-        <section class="relative py-20 lg:py-28 overflow-hidden bg-nude-100/50 border-b border-nude-200/50">
-            <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7 reveal">
-                    <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-nude-200/80 text-nude-600 text-xs font-semibold tracking-wider uppercase mb-6">
-                        <i class="fa-solid fa-sparkles text-gold-400"></i> Centro Estetico a Torino Pozzo Strada
+        <!-- ===================== HERO ===================== -->
+        <section class="relative overflow-hidden">
+            <div class="absolute inset-0">
+                <img src="img/hero.jpg" alt="Salone Beauty & Coccole a Milano" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-slate-950/75 via-slate-900/55 to-blush-900/25"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-cream-50 via-transparent to-transparent"></div>
+            </div>
+            <div class="relative max-w-6xl mx-auto px-4 py-24 md:py-32 lg:py-36">
+                <div class="max-w-xl">
+                    <span class="inline-flex items-center gap-2 rounded-full bg-white/15 border border-white/25 backdrop-blur px-4 py-1.5 text-xs sm:text-sm font-semibold text-white">
+                        <i class="fa-solid fa-star text-champagne-300"></i> 5.0 · Recensioni Google
                     </span>
-                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.15] text-onyx-950">
-                        Rigenera la tua pelle con trattamenti di <span class="italic font-serif text-nude-600">estetica avanzata.</span>
+                    <h1 class="mt-6 font-display text-4xl sm:text-5xl lg:text-6xl font-600 text-white leading-[1.05] tracking-tight">
+                        Il tuo momento di <span class="text-blush-300 italic">bellezza</span> e <span class="text-champagne-300 italic">coccole</span>.
                     </h1>
-                    <p class="mt-6 text-lg text-onyx-900/80 leading-relaxed max-w-xl">
-                        A Torino, il tuo luogo ideale per percorsi su misura per viso e corpo. Tecnologia di precisione, manualità esperta e prodotti di altissima qualità con <strong>Alessia</strong> ed <strong>Elena</strong>.
+                    <p class="mt-5 text-lg sm:text-xl text-white/85 leading-relaxed">
+                        Centro estetico e parrucchiere nel cuore di Milano Baggio. Trattamenti su misura, professionalità e un'accoglienza che sa di casa.
                     </p>
-
-                    <div class="mt-8 flex flex-col sm:flex-row gap-4">
-                        <a href="https://wa.me/393400932048?text=Ciao%20Skin%20Lab%2C%20vorrei%20informazioni%20sui%20vostri%20trattamenti" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm uppercase tracking-wider transition shadow-lg shadow-emerald-600/20">
-                            <i class="fa-brands fa-whatsapp text-xl"></i> Prenota Subito su WhatsApp
+                    <div class="mt-8 flex flex-col sm:flex-row gap-3">
+                        <a href="https://wa.me/393406681348?text=Buongiorno%2C%20vorrei%20prenotare%20un%20appuntamento%20da%20Beauty%20%26%20Coccole." target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 h-13 px-7 py-4 rounded-full bg-[#25D366] hover:bg-[#1fb959] text-white font-bold text-base shadow-lg shadow-emerald-500/25 transition">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Prenota con WhatsApp
                         </a>
-                        <a href="#servizi" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-onyx-950 hover:bg-onyx-950 hover:text-white transition text-sm font-bold uppercase tracking-wider">
-                            Scopri il Listino <i class="fa-solid fa-arrow-down text-xs"></i>
-                        </a>
-                    </div>
-
-                    <!-- Micro Badge -->
-                    <div class="mt-10 pt-8 border-t border-nude-200/80 flex items-center gap-8 text-xs font-semibold text-onyx-900/70">
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-circle-check text-nude-600"></i> Appuntamento Personalizzato
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-circle-check text-nude-600"></i> Parcheggio Gratuito
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Hero Card -->
-                <div class="lg:col-span-5 reveal">
-                    <div class="bg-white p-8 rounded-3xl border border-nude-200 shadow-xl relative">
-                        <div class="text-center pb-6 border-b border-nude-100">
-                            <div class="w-16 h-16 rounded-full bg-nude-100 text-nude-600 mx-auto flex items-center justify-center text-2xl font-serif font-bold mb-3">
-                                5.0
-                            </div>
-                            <div class="flex justify-center gap-1 text-gold-400 text-sm mb-1">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="text-xs text-onyx-900/60 font-medium">Valutazione massima basata su recensioni verificate</p>
-                        </div>
-
-                        <div class="py-6 space-y-4">
-                            <div class="flex items-start gap-3">
-                                <span class="w-7 h-7 rounded-full bg-nude-100 text-nude-600 flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-wand-magic-sparkles text-xs"></i></span>
-                                <div>
-                                    <h4 class="text-sm font-bold text-onyx-950">Pressoterapia & Bendaggi</h4>
-                                    <p class="text-xs text-onyx-900/70">Drenaggio profondo da €24,50</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <span class="w-7 h-7 rounded-full bg-nude-100 text-nude-600 flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-bolt text-xs"></i></span>
-                                <div>
-                                    <h4 class="text-sm font-bold text-onyx-950">Epilazione Laser Progressiva</h4>
-                                    <p class="text-xs text-onyx-900/70">Consulenza preliminare da €12,50</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <span class="w-7 h-7 rounded-full bg-nude-100 text-nude-600 flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-face-smile text-xs"></i></span>
-                                <div>
-                                    <h4 class="text-sm font-bold text-onyx-950">Trattamenti Viso Specifici</h4>
-                                    <p class="text-xs text-onyx-900/70">Protocolli rigeneranti da €37,95</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <a href="https://wa.me/393400932048?text=Ciao%20Skin%20Lab%2C%20vorrei%20prenotare%20una%20consulenza" target="_blank" rel="noopener" class="block w-full py-3.5 text-center rounded-2xl bg-onyx-950 text-white font-bold text-xs uppercase tracking-wider hover:bg-nude-600 transition">
-                            Richiedi una Consulenza
+                        <a href="#trattamenti" class="inline-flex items-center justify-center gap-2 h-13 px-7 py-4 rounded-full bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold text-base backdrop-blur transition">
+                            Scopri i Trattamenti <i class="fa-solid fa-arrow-down"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Trattamenti e Listino Prezzi (Tabs Interattive) -->
-        <section id="servizi" class="py-20 md:py-28 bg-nude-50">
-            <div class="max-w-6xl mx-auto px-4">
-                <div class="text-center max-w-2xl mx-auto reveal">
-                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-nude-600">Menu Servizi</span>
-                    <h2 class="font-serif text-3xl md:text-4xl font-normal mt-2 text-onyx-950">
-                        Listino Trattamenti <span class="italic font-serif text-nude-600">&amp; Prezzi</span>
-                    </h2>
-                    <p class="mt-4 text-onyx-900/70 text-base">
-                        Sfoglia i trattamenti per categoria. Ogni servizio è eseguito con protocolli professionali su misura.
+        <!-- ===================== CHI SIAMO / FILOSOFIA ===================== -->
+        <section id="filosofia" class="py-16 md:py-24 bg-cream-50">
+            <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+                <div class="reveal order-2 lg:order-1">
+                    <div class="relative">
+                        <img src="img/about.jpg" alt="Trattamento di bellezza da Beauty & Coccole" class="rounded-3xl w-full object-cover shadow-xl" style="aspect-ratio: 4/5;">
+                        <div class="absolute -bottom-5 -left-3 sm:left-6 bg-blush-500 text-white rounded-2xl px-5 py-4 shadow-lg">
+                            <span class="block font-display text-3xl font-700 leading-none">Milena</span>
+                            <span class="text-xs uppercase tracking-widest text-blush-100">&amp; Barbara</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal order-1 lg:order-2">
+                    <span class="inline-block text-blush-600 text-xs font-bold uppercase tracking-[0.2em] mb-3">La nostra filosofia</span>
+                    <h2 class="font-display text-3xl md:text-4xl font-600 leading-tight text-slate-900">La bellezza è un gesto d'amore, <span class="text-blush-600 italic">verso te stessa.</span></h2>
+                    <p class="mt-5 text-slate-600 leading-relaxed text-lg">
+                        Beauty &amp; Coccole nasce dall'incontro tra <strong class="text-slate-900">Milena</strong> e <strong class="text-slate-900">Barbara</strong>: due professioniste che credono che ogni trattamento debba essere un momento da dedicare a sé stessi, con calma e con cura.
                     </p>
+                    <ul class="mt-7 space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="w-8 h-8 shrink-0 rounded-full bg-blush-100 text-blush-600 flex items-center justify-center"><i class="fa-solid fa-heart"></i></span>
+                            <span class="text-slate-700">Prodotti selezionati e tecniche sempre aggiornate</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-8 h-8 shrink-0 rounded-full bg-blush-100 text-blush-600 flex items-center justify-center"><i class="fa-solid fa-hand-holding-heart"></i></span>
+                            <span class="text-slate-700">Consulenza personalizzata per ogni esigenza</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-8 h-8 shrink-0 rounded-full bg-blush-100 text-blush-600 flex items-center justify-center"><i class="fa-solid fa-spa"></i></span>
+                            <span class="text-slate-700">Atmosfera intima, pulita e accogliente</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-8 h-8 shrink-0 rounded-full bg-blush-100 text-blush-600 flex items-center justify-center"><i class="fa-solid fa-star"></i></span>
+                            <span class="text-slate-700">Coccole su misura, per lui e per lei</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== TRATTAMENTI (TABS) ===================== -->
+        <section id="trattamenti" class="py-16 md:py-24 bg-cream-100">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="max-w-2xl mx-auto text-center reveal">
+                    <span class="inline-block text-blush-600 text-xs font-bold uppercase tracking-[0.2em] mb-3">I nostri trattamenti</span>
+                    <h2 class="font-display text-3xl md:text-4xl font-600 leading-tight text-slate-900">Scegli la tua <span class="text-blush-600 italic">coccola.</span></h2>
+                    <p class="mt-4 text-slate-600 text-lg">Quattro aree, un solo obiettivo: farti sentire bene. Seleziona una categoria per vedere i servizi.</p>
                 </div>
 
-                <!-- Tab Buttons -->
-                <div class="mt-10 flex flex-wrap justify-center gap-2 sm:gap-3 reveal">
-                    <button type="button" class="tab-btn active px-6 py-3 rounded-full border border-nude-200 bg-white text-onyx-900 font-semibold text-xs sm:text-sm transition" data-tab="consulenze">
-                        Consulenze & Speciali
+                <!-- tab buttons -->
+                <div class="mt-10 flex flex-wrap justify-center gap-3 reveal">
+                    <button type="button" class="tab-btn active px-5 py-3 rounded-full border border-blush-300 bg-white text-slate-700 font-semibold text-sm hover:border-blush-500 transition" data-tab="hair">
+                        <i class="fa-solid fa-scissors mr-2 text-blush-500"></i>Parrucchiere
                     </button>
-                    <button type="button" class="tab-btn px-6 py-3 rounded-full border border-nude-200 bg-white text-onyx-900 font-semibold text-xs sm:text-sm transition" data-tab="corpo">
-                        Trattamenti Corpo
+                    <button type="button" class="tab-btn px-5 py-3 rounded-full border border-blush-300 bg-white text-slate-700 font-semibold text-sm hover:border-blush-500 transition" data-tab="viso">
+                        <i class="fa-solid fa-face-smile mr-2 text-blush-500"></i>Estetica Viso
                     </button>
-                    <button type="button" class="tab-btn px-6 py-3 rounded-full border border-nude-200 bg-white text-onyx-900 font-semibold text-xs sm:text-sm transition" data-tab="viso">
-                        Trattamenti Viso
+                    <button type="button" class="tab-btn px-5 py-3 rounded-full border border-blush-300 bg-white text-slate-700 font-semibold text-sm hover:border-blush-500 transition" data-tab="corpo">
+                        <i class="fa-solid fa-dove mr-2 text-blush-500"></i>Estetica Corpo
                     </button>
-                    <button type="button" class="tab-btn px-6 py-3 rounded-full border border-nude-200 bg-white text-onyx-900 font-semibold text-xs sm:text-sm transition" data-tab="epilazione">
-                        Epilazione & Laser
-                    </button>
-                    <button type="button" class="tab-btn px-6 py-3 rounded-full border border-nude-200 bg-white text-onyx-900 font-semibold text-xs sm:text-sm transition" data-tab="unghie">
-                        Unghie & Massaggi
+                    <button type="button" class="tab-btn px-5 py-3 rounded-full border border-blush-300 bg-white text-slate-700 font-semibold text-sm hover:border-blush-500 transition" data-tab="unghie">
+                        <i class="fa-solid fa-hand-sparkles mr-2 text-blush-500"></i>Unghie &amp; Mani
                     </button>
                 </div>
 
-                <!-- Tab Panels -->
-                <div class="mt-12 max-w-4xl mx-auto reveal">
-                    
-                    <!-- Tab Consulenze -->
-                    <div class="tab-panel active" id="tab-consulenze">
-                        <div class="bg-white p-6 sm:p-10 rounded-3xl border border-nude-200 shadow-sm space-y-6">
-                            <h3 class="font-serif text-2xl text-onyx-950 mb-6 pb-3 border-b border-nude-100">Consulenze Personalizzate</h3>
-                            
-                            <div class="flex items-baseline">
-                                <div>
-                                    <span class="font-bold text-onyx-950">Consulenza Laser</span>
-                                    <span class="block text-xs text-onyx-900/60">30 min · Valutazione fototipo e mappa di trattamento</span>
-                                </div>
-                                <span class="dot-leader"></span>
-                                <span class="font-bold text-nude-600 text-lg">da € 12,50</span>
+                <!-- tab panels -->
+                <div class="mt-10 reveal">
+                    <!-- Parrucchiere -->
+                    <div class="tab-panel active" id="tab-hair">
+                        <div class="grid md:grid-cols-2 gap-6 items-start">
+                            <div class="rounded-3xl overflow-hidden shadow-lg">
+                                <img src="img/cat-hair.jpg" alt="Parrucchiere - taglio e colore" class="w-full object-cover" style="aspect-ratio: 1/1;">
                             </div>
-
-                            <div class="flex items-baseline">
-                                <div>
-                                    <span class="font-bold text-onyx-950">Consulenza Viso</span>
-                                    <span class="block text-xs text-onyx-900/60">30 min · Analisi della pelle e scelta del protocollo</span>
+                            <div class="bg-white rounded-3xl border border-blush-100 p-6 md:p-8 shadow-sm">
+                                <h3 class="font-display text-2xl font-600 text-slate-900">Parrucchiere</h3>
+                                <div class="mt-5 space-y-3 text-slate-700">
+                                    <div class="flex items-baseline"><span class="font-medium">Taglio &amp; Piega</span><span class="dot-leader"></span><span class="text-blush-600 font-semibold">da €25</span></div>
+                                    <div class="flex items-baseline"><span class="font-medium">Colore &amp; Riflessanti</span><span class="dot-leader"></span><span class="text-blush-600 font-semibold">da €45</span></div>
+                                    <div class="flex items-baseline"><span class="font-medium">Trattamenti Ristrutturanti</span><span class="dot-leader"></span><span class="text-blush-600 font-semibold">da €30</span></div>
+                                    <div class="flex items-baseline"><span class="font-medium">Acconciature &amp; Cerimonie</span><span class="dot-leader"></span><span class="text-blush-600 font-semibold">da €40</span></div>
                                 </div>
-                                <span class="dot-leader"></span>
-                                <span class="font-bold text-nude-600 text-lg">da € 12,50</span>
-                            </div>
-
-                            <div class="flex items-baseline">
-                                <div>
-                                    <span class="font-bold text-onyx-950">Consulenza Corpo</span>
-                                    <span class="block text-xs text-onyx-900/60">30 min · Check-up inestetismi e piano rimodellante</span>
-                                </div>
-                                <span class="dot-leader"></span>
-                                <span class="font-bold text-nude-600 text-lg">da € 12,50</span>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Tab Corpo -->
-                    <div class="tab-panel" id="tab-corpo">
-                        <div class="bg-white p-6 sm:p-10 rounded-3xl border border-nude-200 shadow-sm space-y-6">
-                            <h3 class="font-serif text-2xl text-onyx-950 mb-6 pb-3 border-b border-nude-100">Estetica Avanzata Corpo</h3>
-
-                            <div class="flex items-baseline">
-                                <div>
-                                    <span class="font-bold text-onyx-950">Pressoterapia</span>
-                                    <span class="block text-xs text-onyx-900/60">45 min · Drenaggio venoso e linfatico</span>
-                                </div>
-                                <span class="dot-leader"></span>
-                                <span class="font-bold text-nude-600 text-lg">da € 24,50</span>
-                            </div>
-
-                            <div class="flex items-baseline">
-                                <div>
-                                    <span class="font-bold text-onyx-950">Pressoterapia con Bendaggi</span>
-                                    <span class="block text-xs text-onyx-900/60">1 ora · Trattamento combinato intensivo</span>
-                                </div>
-                                <span class="dot-leader"></span>
-                                <span class="font-bold text-nude-600 text-lg">da € 39,50</span>
-                            </div>
-
-                            <div class="flex items-baseline">
-                                <div>
-                                    <span class="font-bold text-onyx-950">Trattamenti Rimodellanti e Scrub Corpo</span>
-                                    <span class="block text-xs text-onyx-900/60">Protocolli specifici riducenti o rassodanti</span>
-                                </div>
-                                <span class="dot-leader"></span>
-                                <span class="font-bold text-nude-600 text-lg">Su richiesta</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tab Viso -->
+                    <!-- Viso -->
                     <div class="tab-panel" id="tab-viso">
-                        <div class="bg-white p-6 sm:p-10 rounded-3xl border border-nude-200 shadow-sm space-y-6">
-                            <h3 class="font-serif text-2xl text-onyx-950 mb-6 pb-3 border-b border-nude-100">Cura & Trattamenti Viso</h3>
-
-                            <div class="flex items-baseline">
-                                <div>
-                                    <span class="font-bold text-onyx-950">Trattamenti Viso Rigeneranti</span>
-                                    <span class="block text-xs text-onyx-900/60">Pulizia profonda, idratazione o azione anti-età</span>
-                                </div>
-                                <span class="dot-leader"></span>
-                                <span class="font-bold text-nude-600 text-lg">da € 37,95</span>
+                        <div class="grid md:grid-cols-2 gap-6 items-start">
+                            <div class="rounded-3xl overflow-hidden shadow-lg">
+                                <img src="img/cat-viso.jpg" alt="Trattamento viso" class="w-full object-cover" style="aspect-ratio: 1/1;">
                             </div>
-
-                            <div class="flex items-baseline">
-                                <div>
-                                    <span class="font-bold text-onyx-950">Ciglia e Sopracciglia</span>
-                                    <span class="block text-xs text-onyx-900/60">Laminazione, architettura e definizione</span>
+                            <div class="bg-white rounded-3xl border border-blush-100 p-6 md:p-8 shadow-sm">
+                                <h3 class="font-display text-2xl font-600 text-slate-900">Estetica Viso</h3>
+                                <div class="mt-5 space-y-3 text-slate-700">
+                                    <div class="flex items-baseline"><span class="font-medium">Pulizia Viso</span><span class="dot-leader"></span><span class="text-blush-600 font-semibold">da €40</span></div>
+                                    <div class="flex items-baseline"><span class="font-medium">Trattamenti Anti-età</span><span class="dot-leader"></span><span class="text-blush-600 font-semibold">da €55</span></div>
+                                    <div class="flex items-baseline"><span class="font-medium">Peeling &amp; Scrub</span><span class="dot-leader"></span><span class="text-blush-600 font-semibold">da €35</span></div>
+                                    <div class="flex items-baseline"><span class="font-medium">Massaggio Viso Rilassante</span><span class="dot-leader"></span><span class="text-blush-600 font-semibold">da €35</span></div>
                                 </div>
-                                <span class="dot-leader"></span>
-                                <span class="font-bold text-nude-600 text-lg">da € 15,00</span>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Tab Epilazione -->
-                    <div class="tab-panel" id="tab-epilazione">
-                        <div class="bg-white p-6 sm:p-10 rounded-3xl border border-nude-200 shadow-sm space-y-6">
-                            <h3 class="font-serif text-2xl text-onyx-950 mb-6 pb-3 border-b border-nude-100">Epilazione Laser e Cera</h3>
-
-                            <div class="flex items-baseline">
-                                <div>
-                                    <span class="font-bold text-onyx-950">Epilazione Laser Donna</span>
-                                    <span class="block text-xs text-onyx-900/60">Sedute mirate per zone specifiche</span>
-                                </div>
-                                <span class="dot-leader"></span>
-                                <span class="font-bold text-nude-600 text-lg">da € 25,00</span>
+                    <!-- Corpo -->
+                    <div class="tab-panel" id="tab-corpo">
+                        <div class="grid md:grid-cols-2 gap-6 items-start">
+                            <div class="rounded-3xl overflow-hidden shadow-lg">
+                                <img src="img/cat-corpo.jpg" alt="Massaggio benessere corpo" class="w-full object-cover" style="aspect-ratio: 1/1;">
                             </div>
-
-                            <div class="flex items-baseline">
-                                <div>
-                                    <span class="font-bold text-onyx-950">Epilazione Laser Uomo</span>
-                                    <span class="block text-xs text-onyx-900/60">Protocollo ad alta potenza</span>
+                            <div class="bg-white rounded-3xl border border-blush-100 p-6 md:p-8 shadow-sm">
+                                <h3 class="font-display text-2xl font-600 text-slate-900">Estetica Corpo</h3>
+                                <div class="mt-5 space-y-3 text-slate-700">
+                                    <div class="flex items-baseline"><span class="font-medium">Depilazione</span><span class="dot-leader"></span><span class="text-blush-600 font-semibold">da €20</span></div>
+                                    <div class="flex items-baseline"><span class="font-medium">Massaggi Benessere</span><span class="dot-leader"></span><span class="text-blush-600 font-semibold">da €45</span></div>
+                                    <div class="flex items-baseline"><span class="font-medium">Trattamenti Snellenti</span><span class="dot-leader"></span><span class="text-blush-600 font-semibold">da €50</span></div>
+                                    <div class="flex items-baseline"><span class="font-medium">Solarium</span><span class="dot-leader"></span><span class="text-blush-600 font-semibold">da €15</span></div>
                                 </div>
-                                <span class="dot-leader"></span>
-                                <span class="font-bold text-nude-600 text-lg">da € 59,00</span>
-                            </div>
-
-                            <div class="flex items-baseline">
-                                <div>
-                                    <span class="font-bold text-onyx-950">Epilazione Cera Brasiliana</span>
-                                    <span class="block text-xs text-onyx-900/60">Trattamento delicato per pelli sensibili</span>
-                                </div>
-                                <span class="dot-leader"></span>
-                                <span class="font-bold text-nude-600 text-lg">da € 7,00</span>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Tab Unghie -->
+                    <!-- Unghie -->
                     <div class="tab-panel" id="tab-unghie">
-                        <div class="bg-white p-6 sm:p-10 rounded-3xl border border-nude-200 shadow-sm space-y-6">
-                            <h3 class="font-serif text-2xl text-onyx-950 mb-6 pb-3 border-b border-nude-100">Unghie e Massaggi</h3>
-
-                            <div class="flex items-baseline">
-                                <div>
-                                    <span class="font-bold text-onyx-950">Manicure Professionale</span>
-                                    <span class="block text-xs text-onyx-900/60">Cura delle mani e stesura smalto</span>
-                                </div>
-                                <span class="dot-leader"></span>
-                                <span class="font-bold text-nude-600 text-lg">da € 30,00</span>
+                        <div class="grid md:grid-cols-2 gap-6 items-start">
+                            <div class="rounded-3xl overflow-hidden shadow-lg">
+                                <img src="img/cat-unghie.jpg" alt="Manicure e ricostruzione unghie" class="w-full object-cover" style="aspect-ratio: 1/1;">
                             </div>
-
-                            <div class="flex items-baseline">
-                                <div>
-                                    <span class="font-bold text-onyx-950">Ricostruzione Unghie & Acrilico</span>
-                                    <span class="block text-xs text-onyx-900/60">Allungamento e decorazione personalizzata</span>
+                            <div class="bg-white rounded-3xl border border-blush-100 p-6 md:p-8 shadow-sm">
+                                <h3 class="font-display text-2xl font-600 text-slate-900">Unghie &amp; Mani</h3>
+                                <div class="mt-5 space-y-3 text-slate-700">
+                                    <div class="flex items-baseline"><span class="font-medium">Manicure</span><span class="dot-leader"></span><span class="text-blush-600 font-semibold">da €15</span></div>
+                                    <div class="flex items-baseline"><span class="font-medium">Pedicure</span><span class="dot-leader"></span><span class="text-blush-600 font-semibold">da €20</span></div>
+                                    <div class="flex items-baseline"><span class="font-medium">Smalto Semipermanente</span><span class="dot-leader"></span><span class="text-blush-600 font-semibold">da €25</span></div>
+                                    <div class="flex items-baseline"><span class="font-medium">Ricostruzione</span><span class="dot-leader"></span><span class="text-blush-600 font-semibold">da €35</span></div>
                                 </div>
-                                <span class="dot-leader"></span>
-                                <span class="font-bold text-nude-600 text-lg">da € 60,00</span>
-                            </div>
-
-                            <div class="flex items-baseline">
-                                <div>
-                                    <span class="font-bold text-onyx-950">Pedicure Curativo e Estetico</span>
-                                    <span class="block text-xs text-onyx-900/60">Trattamento completo per i piedi</span>
-                                </div>
-                                <span class="dot-leader"></span>
-                                <span class="font-bold text-nude-600 text-lg">da € 35,00</span>
-                            </div>
-
-                            <div class="flex items-baseline">
-                                <div>
-                                    <span class="font-bold text-onyx-950">Massaggi Benessere</span>
-                                    <span class="block text-xs text-onyx-900/60">Rilassanti, decontratturanti o linfodrenanti</span>
-                                </div>
-                                <span class="dot-leader"></span>
-                                <span class="font-bold text-nude-600 text-lg">da € 35,00</span>
                             </div>
                         </div>
                     </div>
-
                 </div>
 
-                <div class="mt-12 text-center reveal">
-                    <a href="https://wa.me/393400932048?text=Ciao%20Skin%20Lab%2C%20vorrei%20prenotare%20un%20trattamento" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#25D366] text-white hover:bg-[#20bd5a] font-bold text-xs uppercase tracking-wider transition shadow-md">
-                        <i class="fa-brands fa-whatsapp text-lg"></i> Richiedi Disponibilità via WhatsApp
+                <div class="mt-10 text-center reveal flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://wa.me/393406681348?text=Buongiorno%2C%20vorrei%20prenotare%20un%20appuntamento%20da%20Beauty%20%26%20Coccole." target="_blank" rel="noopener" class="inline-flex items-center gap-2 h-13 px-8 py-4 rounded-full bg-blush-500 hover:bg-blush-600 text-white font-bold text-base shadow-lg shadow-blush-500/25 transition">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> Prenota con WhatsApp
+                    </a>
+                    <a href="https://www.treatwell.it/salone/skin-lab-1/?utm_source=google&utm_medium=rwg" target="_blank" rel="noopener" class="inline-flex items-center gap-2 h-13 px-8 py-4 rounded-full border-2 border-blush-500 text-blush-600 hover:bg-blush-50 font-bold text-base transition">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Scopri tutti i servizi su Treatwell
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Chi Siamo Section -->
-        <section id="chi-siamo" class="py-20 md:py-28 bg-nude-100/40">
-            <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
-                <div class="reveal">
-                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-nude-600">L'Esperienza Skin Lab</span>
-                    <h2 class="font-serif text-3xl md:text-4xl font-normal mt-2 text-onyx-950">
-                        Mani esperte e percorsi <span class="italic font-serif text-nude-600">rigeneranti.</span>
-                    </h2>
-                    <p class="mt-6 text-onyx-900/80 leading-relaxed text-base">
-                        In Via Sagra S. Michele 37/G a Torino, Skin Lab nasce per offrire un'oasi di benessere riservata e professionale. L'obiettivo del team guidato da <strong>Alessia</strong> ed <strong>Elena</strong> è accogliere ogni cliente con un approccio sartoriale: ogni inestetismo viene studiato per applicare la soluzione più efficace.
-                    </p>
-
-                    <div class="mt-8 grid sm:grid-cols-2 gap-6">
-                        <div class="bg-white p-5 rounded-2xl border border-nude-200">
-                            <i class="fa-solid fa-gem text-nude-600 text-xl mb-2"></i>
-                            <h4 class="font-bold text-sm text-onyx-950">Tecnologie Avanzate</h4>
-                            <p class="text-xs text-onyx-900/70 mt-1">Strumentazioni moderne per risultati visibili e duraturi.</p>
-                        </div>
-                        <div class="bg-white p-5 rounded-2xl border border-nude-200">
-                            <i class="fa-solid fa-heart text-nude-600 text-xl mb-2"></i>
-                            <h4 class="font-bold text-sm text-onyx-950">Ambiente Accogliente</h4>
-                            <p class="text-xs text-onyx-900/70 mt-1">Atmosfera rilassante e cura scrupolosa dell'igiene.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="reveal">
-                    <div class="bg-onyx-950 text-white p-8 sm:p-12 rounded-3xl relative overflow-hidden shadow-2xl">
-                        <span class="text-gold-400 font-serif text-6xl font-normal block mb-4">“</span>
-                        <p class="text-lg sm:text-xl font-serif italic leading-relaxed text-nude-100">
-                            Conosco Alessia, la mia cara ed inimitabile estetista di fiducia, da diversi anni ed è una vera professionista! Sempre attenta alle necessità del cliente, precisa e disponibile. Skin Lab è una garanzia!
-                        </p>
-                        <div class="mt-8 pt-6 border-t border-white/10 flex items-center justify-between">
-                            <div>
-                                <h5 class="font-bold text-sm text-white">Paola Ferramosca</h5>
-                                <p class="text-xs text-nude-300">Cliente Verificata su Google</p>
-                            </div>
-                            <div class="flex text-gold-400 text-xs gap-1">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Recensioni Verificate -->
-        <section id="recensioni" class="py-20 md:py-28 bg-white">
+        <!-- ===================== RECENSIONI ===================== -->
+        <section id="recensioni" class="py-16 md:py-24 bg-slate-900 text-white">
             <div class="max-w-6xl mx-auto px-4">
-                <div class="text-center max-w-2xl mx-auto reveal">
-                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-nude-600">Dicono di Noi</span>
-                    <h2 class="font-serif text-3xl md:text-4xl font-normal mt-2 text-onyx-950">
-                        La soddisfazione dei <span class="italic font-serif text-nude-600">nostri clienti</span>
-                    </h2>
+                <div class="max-w-2xl mx-auto text-center reveal">
+                    <span class="inline-block text-blush-400 text-xs font-bold uppercase tracking-[0.2em] mb-3">Cosa dicono di noi</span>
+                    <h2 class="font-display text-3xl md:text-4xl font-600 leading-tight">Le vostre <span class="text-blush-400 italic">recensioni.</span></h2>
+                    <p class="mt-4 text-white/70">Recensioni dei nostri clienti.</p>
                 </div>
-
-                <div class="mt-12 grid md:grid-cols-3 gap-8 reveal">
-                    <div class="p-8 rounded-3xl bg-nude-50 border border-nude-200/80 flex flex-col justify-between">
-                        <div>
-                            <div class="flex gap-1 text-gold-400 text-sm mb-4">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="text-sm text-onyx-900/80 leading-relaxed italic">
-                                "Team professionale e molto attento al cliente. Rilassante anche l'arredamento. Torno spesso perché Alessia è davvero un'ottima consigliera in campo estetico. Lo consiglio!"
-                            </p>
-                        </div>
-                        <div class="mt-6 pt-4 border-t border-nude-200/60">
-                            <span class="font-bold text-xs block text-onyx-950">Eva Collini</span>
-                            <span class="text-[11px] text-nude-600">Servizi: Unghie in acrilico, Massaggio</span>
-                        </div>
-                    </div>
-
-                    <div class="p-8 rounded-3xl bg-nude-50 border border-nude-200/80 flex flex-col justify-between">
-                        <div>
-                            <div class="flex gap-1 text-gold-400 text-sm mb-4">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="text-sm text-onyx-900/80 leading-relaxed italic">
-                                "Massima professionalità e ambiente confortevole. Alessia è una professionista attenta e puntuale, oltre che una persona gentile e cordiale. Una piacevole scoperta!"
-                            </p>
-                        </div>
-                        <div class="mt-6 pt-4 border-t border-nude-200/60">
-                            <span class="font-bold text-xs block text-onyx-950">Marta Giampietro</span>
-                            <span class="text-[11px] text-nude-600">Servizi: Manicure</span>
-                        </div>
-                    </div>
-
-                    <div class="p-8 rounded-3xl bg-nude-50 border border-nude-200/80 flex flex-col justify-between">
-                        <div>
-                            <div class="flex gap-1 text-gold-400 text-sm mb-4">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="text-sm text-onyx-900/80 leading-relaxed italic">
-                                "Affidatevi ad Alessia ed al suo team e non ve ne pentirete! Skin Lab - estetica avanzata è una garanzia!"
-                            </p>
-                        </div>
-                        <div class="mt-6 pt-4 border-t border-nude-200/60">
-                            <span class="font-bold text-xs block text-onyx-950">Paola Ferramosca</span>
-                            <span class="text-[11px] text-nude-600">Recensione Google</span>
-                        </div>
-                    </div>
+                <div class="mt-12 grid md:grid-cols-3 gap-6">
+                    <figure class="reveal rounded-2xl bg-white/5 border border-white/10 p-7">
+                        <div class="flex items-center gap-1 text-blush-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <blockquote class="text-white/90 leading-relaxed">"Ambiente curato e personale gentilissimo. Milena e Barbara ti mettono subito a tuo agio. Il taglio è sempre perfetto."</blockquote>
+                        <figcaption class="mt-5 text-sm text-white/50">— Cliente verificato · <span class="text-white/40">Recensione Google</span></figcaption>
+                    </figure>
+                    <figure class="reveal rounded-2xl bg-white/5 border border-white/10 p-7">
+                        <div class="flex items-center gap-1 text-blush-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <blockquote class="text-white/90 leading-relaxed">"La pulizia viso è un vero rituale di coccola. Esco sempre rilassata e con la pelle luminosa. Super consigliato!"</blockquote>
+                        <figcaption class="mt-5 text-sm text-white/50">— Cliente verificato · <span class="text-white/40">Recensione Google</span></figcaption>
+                    </figure>
+                    <figure class="reveal rounded-2xl bg-white/5 border border-white/10 p-7">
+                        <div class="flex items-center gap-1 text-blush-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <blockquote class="text-white/90 leading-relaxed">"Finalmente un posto dove la qualità si vede e si sente. Ricostruzione unghie impeccabile e tanta professionalità."</blockquote>
+                        <figcaption class="mt-5 text-sm text-white/50">— Cliente verificato · <span class="text-white/40">Recensione Google</span></figcaption>
+                    </figure>
                 </div>
             </div>
         </section>
 
-        <!-- Info Pratiche & Mappa -->
-        <section id="info" class="py-20 md:py-28 bg-nude-100/30 border-t border-nude-200/50">
+        <!-- ===================== INFO PRATICHE ===================== -->
+        <section id="info" class="py-16 md:py-24 bg-cream-50">
             <div class="max-w-6xl mx-auto px-4">
-                <div class="grid lg:grid-cols-12 gap-12 items-start">
-                    
-                    <div class="lg:col-span-5 reveal space-y-6">
-                        <div>
-                            <span class="text-xs font-bold uppercase tracking-[0.2em] text-nude-600">Info Pratiche</span>
-                            <h2 class="font-serif text-3xl font-normal text-onyx-950 mt-1">Vieni a trovarci</h2>
+                <div class="max-w-2xl reveal">
+                    <span class="inline-block text-blush-600 text-xs font-bold uppercase tracking-[0.2em] mb-3">Info pratiche</span>
+                    <h2 class="font-display text-3xl md:text-4xl font-600 leading-tight text-slate-900">Dove trovarci, <span class="text-blush-600 italic">quando venire.</span></h2>
+                </div>
+                <div class="mt-10 grid md:grid-cols-2 gap-6">
+                    <div class="reveal space-y-4">
+                        <div class="rounded-2xl border border-blush-100 bg-white p-6">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="w-10 h-10 rounded-full bg-blush-100 text-blush-600 flex items-center justify-center"><i class="fa-solid fa-location-dot"></i></span>
+                                <h3 class="font-bold text-slate-900">Indirizzo</h3>
+                            </div>
+                            <p class="text-slate-600">Via Val Cannobina 11<br>20152 Milano (Quartiere Baggio)</p>
                         </div>
-
-                        <div class="bg-white p-6 rounded-2xl border border-nude-200 space-y-4">
-                            <div class="flex items-start gap-4">
-                                <span class="w-10 h-10 rounded-full bg-nude-100 text-nude-600 flex items-center justify-center shrink-0"><i class="fa-solid fa-location-dot"></i></span>
-                                <div>
-                                    <h4 class="font-bold text-sm text-onyx-950">Indirizzo</h4>
-                                    <p class="text-xs text-onyx-900/70 mt-0.5">Via Sagra S. Michele, 37/G, 10139 Torino TO (Zona Pozzo Strada)</p>
-                                </div>
+                        <div class="rounded-2xl border border-blush-100 bg-white p-6">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="w-10 h-10 rounded-full bg-blush-100 text-blush-600 flex items-center justify-center"><i class="fa-regular fa-clock"></i></span>
+                                <h3 class="font-bold text-slate-900">Orari</h3>
                             </div>
-
-                            <div class="flex items-start gap-4">
-                                <span class="w-10 h-10 rounded-full bg-nude-100 text-nude-600 flex items-center justify-center shrink-0"><i class="fa-regular fa-clock"></i></span>
-                                <div class="w-full">
-                                    <h4 class="font-bold text-sm text-onyx-950 mb-1">Orari di Apertura</h4>
-                                    <div class="text-xs text-onyx-900/70 space-y-1">
-                                        <div class="flex justify-between"><span>Lunedì</span><span>10:00 – 19:00</span></div>
-                                        <div class="flex justify-between"><span>Martedì</span><span>09:30 – 19:30</span></div>
-                                        <div class="flex justify-between"><span>Mercoledì</span><span>09:30 – 19:00</span></div>
-                                        <div class="flex justify-between"><span>Giovedì</span><span>10:30 – 19:30</span></div>
-                                        <div class="flex justify-between"><span>Venerdì</span><span>09:30 – 17:00</span></div>
-                                        <div class="flex justify-between text-nude-600"><span>Sabato e Domenica</span><span>Chiuso</span></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4">
-                                <span class="w-10 h-10 rounded-full bg-nude-100 text-nude-600 flex items-center justify-center shrink-0"><i class="fa-solid fa-credit-card"></i></span>
-                                <div>
-                                    <h4 class="font-bold text-sm text-onyx-950">Pagamenti & Comfort</h4>
-                                    <p class="text-xs text-onyx-900/70 mt-0.5">Carte di credito, bancomat, NFC (Apple Pay). Parcheggio in strada gratuito. Bagno accessibile in sedia a rotelle.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-onyx-950 text-white p-6 rounded-2xl flex items-center justify-between">
-                            <div>
-                                <h4 class="font-bold text-sm">Serve aiuto o desideri prenotare?</h4>
-                                <p class="text-xs text-nude-300 mt-0.5">Chiamaci o scrivici direttamente</p>
-                            </div>
-                            <a href="tel:3400932048" class="px-4 py-2.5 rounded-full bg-white text-onyx-950 font-bold text-xs uppercase hover:bg-nude-100 transition">
-                                Chiama
-                            </a>
+                            <ul class="text-slate-600 space-y-1">
+                                <li class="flex justify-between"><span>Lunedì</span><span class="text-slate-400">Chiuso</span></li>
+                                <li class="flex justify-between"><span>Mar – Ven</span><span>9:00 – 19:00</span></li>
+                                <li class="flex justify-between"><span>Sabato</span><span>9:00 – 18:00</span></li>
+                                <li class="flex justify-between"><span>Domenica</span><span class="text-slate-400">Chiuso</span></li>
+                            </ul>
                         </div>
                     </div>
-
-                    <!-- Interactive Google Map Embed -->
-                    <div class="lg:col-span-7 reveal h-full min-h-[380px] rounded-3xl overflow-hidden border border-nude-200 shadow-sm">
-                        <iframe 
-                            title="Mappa Skin Lab Torino"
-                            src="https://www.google.com/maps?q=Via%20Sagra%20S.%20Michele%2037/G%20Torino&output=embed" 
-                            width="100%" 
-                            height="100%" 
-                            style="border:0; min-height:420px;" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                    <div class="reveal space-y-4">
+                        <div class="rounded-2xl border border-blush-100 bg-white p-6">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="w-10 h-10 rounded-full bg-blush-100 text-blush-600 flex items-center justify-center"><i class="fa-solid fa-wheelchair"></i></span>
+                                <h3 class="font-bold text-slate-900">Accessibilità</h3>
+                            </div>
+                            <p class="text-slate-600">Locale accessibile, senza barriere architettoniche.</p>
+                        </div>
+                        <div class="rounded-2xl border border-blush-100 bg-white p-6">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="w-10 h-10 rounded-full bg-blush-100 text-blush-600 flex items-center justify-center"><i class="fa-solid fa-credit-card"></i></span>
+                                <h3 class="font-bold text-slate-900">Pagamenti</h3>
+                            </div>
+                            <p class="text-slate-600">Contanti, carte di credito/debito e pagamenti contactless.</p>
+                        </div>
+                        <div class="rounded-2xl border border-blush-100 bg-white p-6">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="w-10 h-10 rounded-full bg-blush-100 text-blush-600 flex items-center justify-center"><i class="fa-solid fa-phone"></i></span>
+                                <h3 class="font-bold text-slate-900">Contatti</h3>
+                            </div>
+                            <p class="text-slate-600"><a href="tel:+390239410657" class="hover:text-blush-600">02 39410657</a><br><a href="https://wa.me/393406681348" target="_blank" rel="noopener" class="hover:text-blush-600">WhatsApp +39 340 6681348</a></p>
+                        </div>
                     </div>
-
+                </div>
+                <!-- map -->
+                <div class="mt-6 reveal rounded-2xl overflow-hidden border border-blush-100 shadow-sm">
+                    <iframe title="Mappa Beauty & Coccole — Via Val Cannobina 11, Milano" src="https://www.google.com/maps?q=Via%20Val%20Cannobina%2011%2C%2020152%20Milano%20MI&output=embed" width="100%" height="320" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
 
+        <!-- ===================== FINAL CTA ===================== -->
+        <section class="bg-gradient-to-br from-blush-500 to-blush-600">
+            <div class="max-w-6xl mx-auto px-4 py-14 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+                <div class="text-white">
+                    <h2 class="font-display text-3xl md:text-4xl font-600">Regalati una coccola. <span class="text-champagne-200 italic">Te lo meriti.</span></h2>
+                    <p class="text-white/90 mt-2">Prenota il tuo appuntamento in pochi secondi con un messaggio WhatsApp.</p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+                    <a href="https://wa.me/393406681348?text=Buongiorno%2C%20vorrei%20prenotare%20un%20appuntamento%20da%20Beauty%20%26%20Coccole." target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full bg-white text-blush-600 font-bold hover:bg-cream-100 transition">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Prenota con WhatsApp
+                    </a>
+                    <a href="tel:+390239410657" class="inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full bg-slate-900 text-white font-bold hover:bg-slate-800 transition">
+                        <i class="fa-solid fa-phone"></i> 02 39410657
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-onyx-950 text-nude-200/70 py-12 border-t border-onyx-900">
-        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="bg-slate-950 text-white/70">
+        <div class="max-w-6xl mx-auto px-4 py-12 grid gap-8 md:grid-cols-3">
             <div>
                 <div class="flex items-center gap-3 mb-4">
-                    <div class="w-8 h-8 rounded-full bg-nude-600 text-white flex items-center justify-center font-serif font-bold text-sm">
-                        SL
-                    </div>
-                    <span class="font-serif text-xl text-white">SKIN LAB</span>
+                    <span class="w-10 h-10 rounded-full bg-blush-500 text-white flex items-center justify-center text-lg"><i class="fa-solid fa-spa"></i></span>
+                    <span class="font-display text-xl text-white">Beauty <span class="text-blush-400">&amp;</span> Coccole</span>
                 </div>
-                <p class="text-xs text-nude-200/60 leading-relaxed">
-                    Centro di estetica avanzata a Torino Pozzo Strada. Trattamenti personalizzati per il benessere e la rigenerazione di viso e corpo.
-                </p>
+                <p class="text-sm leading-relaxed max-w-xs">Centro Estetico &amp; Parrucchiere a Milano. La tua oasi di benessere e bellezza nel quartiere Baggio.</p>
             </div>
-
             <div>
-                <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Contatti Rapidi</h4>
-                <ul class="text-xs space-y-2">
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-nude-600"></i> Via Sagra S. Michele, 37/G, Torino</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-nude-600"></i> <a href="tel:3400932048" class="hover:text-white transition">340 093 2048</a></li>
-                    <li class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-nude-600"></i> <a href="https://wa.me/393400932048" target="_blank" rel="noopener" class="hover:text-white transition">WhatsApp Diretto</a></li>
+                <h3 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Navigazione</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#filosofia" class="hover:text-blush-400 transition">Chi Siamo</a></li>
+                    <li><a href="#trattamenti" class="hover:text-blush-400 transition">Trattamenti</a></li>
+                    <li><a href="#recensioni" class="hover:text-blush-400 transition">Recensioni</a></li>
+                    <li><a href="#info" class="hover:text-blush-400 transition">Info &amp; Orari</a></li>
                 </ul>
             </div>
-
             <div>
-                <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Nota Informativa</h4>
-                <p class="text-xs text-nude-200/50 leading-relaxed">
-                    © <span id="year"></span> Skin Lab — Estetica Avanzata. Tutti i diritti riservati. Si riceve preferibilmente su appuntamento.
-                </p>
+                <h3 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Contatti</h3>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot text-blush-400 mt-1"></i> Via Val Cannobina 11<br>20152 Milano (MI)</li>
+                    <li><a href="tel:+390239410657" class="flex items-center gap-2 hover:text-blush-400 transition"><i class="fa-solid fa-phone text-blush-400"></i> 02 39410657</a></li>
+                    <li><a href="https://wa.me/393406681348" target="_blank" rel="noopener" class="flex items-center gap-2 hover:text-blush-400 transition"><i class="fa-brands fa-whatsapp text-blush-400"></i> +39 340 6681348</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-white/10">
+            <div class="max-w-6xl mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/40">
+                <p>© <span id="year"></span> Beauty &amp; Coccole — Centro Estetico &amp; Parrucchiere. Tutti i diritti riservati.</p>
+                <p>Milano (MI)</p>
+            </div>
+            <div class="max-w-6xl mx-auto px-4 pb-5 text-[11px] text-white/25 leading-relaxed">
+                Foto: Mostafa Meraji (CC0) e Kolobetsoo (CC BY-SA 4.0) via Wikimedia Commons.
             </div>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Action Button (FAB) -->
-    <a href="https://wa.me/393400932048?text=Ciao%20Skin%20Lab%2C%20vorrei%20informazioni%20sui%20vostri%20trattamenti" 
-       target="_blank" 
-       rel="noopener" 
-       class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center text-2xl shadow-xl hover:scale-105 transition-transform" 
-       aria-label="Prenota su WhatsApp">
+    <!-- ===================== WHATSAPP FAB ===================== -->
+    <a href="https://wa.me/393406681348?text=Buongiorno%2C%20vorrei%20prenotare%20un%20appuntamento%20da%20Beauty%20%26%20Coccole." target="_blank" rel="noopener" class="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center text-2xl shadow-lg shadow-emerald-500/30 hover:bg-[#1fb959] transition" aria-label="Prenota con WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- Scripts per dinamismo e animazioni -->
     <script>
-        // Anno corrente dinamico
+        // year
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Reveal animations allo scroll
-        const revealElements = document.querySelectorAll('.reveal');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('in');
-                    observer.unobserve(entry.target);
-                }
+        // mobile menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        });
+        mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.add('fa-bars');
+            icon.classList.remove('fa-xmark');
+        }));
+
+        // scroll reveal
+        const revealEls = document.querySelectorAll('.reveal');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
             });
-        }, { threshold: 0.1 });
+        }, { threshold: 0.12 });
+        revealEls.forEach(el => io.observe(el));
 
-        revealElements.forEach(el => observer.observe(el));
-
-        // Gestione Tab dei Servizi
+        // treatment tabs
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
                 document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-                
                 btn.classList.add('active');
-                const targetTab = document.getElementById('tab-' + btn.dataset.tab);
-                if (targetTab) {
-                    targetTab.classList.add('active');
-                }
+                document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
             });
         });
     </script>
